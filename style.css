@@ -1,13 +1,13 @@
 body {
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .navbar {
     display: flex;
     font-family: ubuntu;
-    height: 4vi;
+    height: 6vi;
     font-size: 1vi;
     padding: 0 30px;
 }
@@ -21,8 +21,8 @@ body {
 
 .link a {
     text-decoration: none;
-    margin: 3px 8px;
-    padding: 4px 4px;
+    margin: 5px;
+    padding: 10px;
     color: #4b4848;
     transition: all .3s;
 }
@@ -114,7 +114,7 @@ body {
 @media screen and (min-width:1000px) {
     .link a:hover {
         color: rgb(33, 33, 33);
-        font-size: 1.2vi;
+        font-size: 1.1vi;
         transition: all .3s;
         background-color: whitesmoke;
         border-radius: .5vi;
@@ -129,7 +129,7 @@ body {
 
 @media screen and (max-width:1000px) {
     .navbar {
-        height: 8vi;
+        height: 12vi;
     }
     .link {
         display: none;
@@ -147,9 +147,65 @@ body {
         cursor: pointer;
     }
     .logo img {
-        width: 300px;
+        width: 25vi;
     }
     .socialmedia img {
-        width: 40px;
+        width: 4vi;
+        margin: 1px 1px;
+        padding: 2px 2px;
+    }
+}
+
+.slideshowImage {
+    visibility: hidden;
+    opacity: 0;
+    transition: 1s;
+}
+
+.slideshowImage.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.slideshowImage img {
+    position: absolute;
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
+.slideshow .button {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 56.25vi;
+}
+
+.slideshow .button button {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: black;
+    width: 7%;
+    font-size: 2vi;
+    height: 100%;
+    border: 0;
+    cursor: pointer;
+    transition: all .7s;
+}
+
+.slideshow .button button:hover {
+    background-color: rgba(75, 72, 72, 0.3);
+    color: white;
+    width: 10%;
+    transition: all .7s;
+}
+
+@media screen and (max-width:1000px) {
+    .slideshow .button button {
+        font-size: 4vi;
+        min-width: fit-content;
+    }
+    .slideshow .button button:hover {
+        min-width: fit-content;
+        width: 12vi;
     }
 }

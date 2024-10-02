@@ -16,5 +16,13 @@ function changeDisplayDropDown() {
     console.log(this);
 }
 
+function nextImage(i) {
+    slides[currentSlide].classList.toggle("active");
+    currentSlide = (currentSlide + i + slides.length) % slides.length;
+    slides[currentSlide].classList.toggle("active");
+}
+
 const menuicon = document.querySelectorAll('.menuicon');
 menuicon.forEach(el => el.addEventListener('click', changeMenuIcon));
+let currentSlide = 0;
+const slides = document.getElementsByClassName("slideshowImage");
