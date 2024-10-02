@@ -31,7 +31,7 @@ body {
 }
 
 #fixWidthForMenuicon {
-    display: flex;
+    display: none;
     align-items: center;
     width: 30%;
 }
@@ -76,6 +76,9 @@ body {
     }
     .link {
         display: none;
+    }
+    #fixWidthForMenuicon {
+        display: flex;
     }
     .menuicon {
         display: flex;
