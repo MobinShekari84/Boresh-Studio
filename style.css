@@ -24,6 +24,7 @@ body {
     margin: 3px 8px;
     padding: 4px 4px;
     color: #4b4848;
+    transition: all .3s;
 }
 
 .menuicon {
@@ -43,6 +44,19 @@ body {
     background-color: #4b4848;
     margin: 3px 0;
     transition: 0.4s;
+}
+
+.xmenu .bar:nth-child(1) {
+    transform: translate(0, 10px) rotate(-45deg);
+}
+
+.xmenu .bar:nth-child(2) {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.xmenu .bar:nth-child(3) {
+    transform: translate(0, -10px) rotate(45deg);
 }
 
 .logo {
@@ -67,8 +81,24 @@ body {
     margin: 3px 4px;
     padding: 4px 4px;
     width: 30px;
+    transition: all .3s;
 }
 
+@media screen and (min-width:1000px) {
+    .link a:hover {
+        color: rgb(33, 33, 33);
+        font-size: 1.2vi;
+        transition: all .3s;
+        background-color: whitesmoke;
+        border-radius: .5vi;
+    }
+    .socialmedia img:hover {
+        width: 35px;
+        transition: all .3s;
+        background-color: whitesmoke;
+        border-radius: .5vi;
+    }
+}
 
 @media screen and (max-width:1000px) {
     .navbar {
